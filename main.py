@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from gpts_roles import create_gpts
 from prompt import create_prompt
-from content_manager import read_from_file,write_to_file
+from content_manager import read_from_file,write_to_files
 
 load_dotenv()
 
@@ -13,7 +13,7 @@ client = OpenAI(api_key=api_key)
 
 content = read_from_file()
 
-gpts = create_gpts()
+gpts = create_gpts(gpts_type="programmer")
 prompt = create_prompt(content)
 
 
@@ -25,7 +25,7 @@ completion = client.chat.completions.create(
     ]
 )
 
-write_to_file(completion.choices[0].message,"", "")
+write_to_files(completion.choices[0].message.content,"", "")
 
 
 
