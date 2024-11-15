@@ -23,7 +23,7 @@ def create_article(client):
 def create_image(client):
     """ Function takes open ai client as an argument, uses find_promts function to search alt attributes (they are also prompts) and generates images based on them. The images are stored in list as urls and are written to file. """
     image_urls = []
-    prompts = find_prompts()
+    prompts = find_prompts("./artykul.html")
     
     for prompt in prompts:
         response = client.images.generate(
