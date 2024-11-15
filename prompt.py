@@ -1,5 +1,5 @@
 def create_prompt(content, prompt_type="article"):
-    """ Returns prompt dictionary based on content and prompt_type. """
+    """ Returns a prompt dictionary based on the content and prompt_type. """
     if prompt_type == "article":
         return  {
             "role": "user",

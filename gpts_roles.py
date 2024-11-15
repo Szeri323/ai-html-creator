@@ -1,5 +1,5 @@
 def create_gpts(gpts_type=""):
-    """ Returns gpts_role dict based on gpts_type. """
+    """ Returns a gpts_role dictionary based on the gpts_type. """
     if gpts_type == "":
         return {"role": "system", "content": "You are a helpful assistant."}
     if gpts_type == "programmer":

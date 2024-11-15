@@ -1,7 +1,7 @@
 import re
 
 def find_prompts(file_name):
-    """ Function search article for alt atributes in html tags and return them as an list. """
+    """ The function searches an article for alt attributes in HTML tags and returns them as a list. """
     file = open(file_name, "r")
     html_text = file.read()
     
